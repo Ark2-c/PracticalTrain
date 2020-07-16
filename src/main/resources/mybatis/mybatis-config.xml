@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="druid.properties"></properties>
+    <typeAliases>
+        <package name="com.gfz.dto"/>
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="com.gfz.util.DruidDataSourceFactory">
+                <property name="driverClass"  value="${driverClass}" />
+                <property name="jdbcUrl" value="${jdbcUrl}" />
+                <property name="username" value="${username}" />
+                <property name="password" value="${password}" />
+                <property name="initialSize" value="${initialSize}"/>
+                <property name="maxActive" value="${maxActive}"/>
+                <property name="validationQuery" value="${validationQuery}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper class="com.gfz.dao.CityDao"/>
+        <mapper class="com.gfz.dao.CitizenDao"/>
+        <mapper class="com.gfz.dao.AdminDao"/>
+    </mappers>
+</configuration>

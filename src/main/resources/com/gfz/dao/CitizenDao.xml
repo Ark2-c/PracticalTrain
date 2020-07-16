@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gfz.dao.CitizenDao">
+    <select id="findAll" resultType="Citizen">
+  		select * from citizen;
+  	</select>
+    <select id="findByName" parameterType="String" resultType="Citizen">
+	    select * from citizen where name = #{name}
+    </select>
+    <update id="add" parameterType="Citizen">
+        insert into citizen(idCard,name,phone,sex) values(#{idCard},#{name },#{phone},#{sex})
+    </update>
+
+    <update id="edit" parameterType="Citizen">
+        update citizen set username=#{username},passwd = #{passwd} where id = #{id}
+    </update>
+
+</mapper>
