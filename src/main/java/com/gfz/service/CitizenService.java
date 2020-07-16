@@ -2,6 +2,7 @@ package com.gfz.service;
 
 import com.gfz.dto.Citizen;
 import com.gfz.dto.City;
+import com.gfz.dto.CityCitizen;
 
 import java.io.IOException;
 import java.util.List;
@@ -18,4 +19,5 @@ public interface CitizenService {
     public int add(Citizen citizen) throws IOException;
     public int edit(Citizen citizen) throws IOException;
     public int delete(String id) throws IOException;
+    public List<CityCitizen> count()throws IOException;
 }

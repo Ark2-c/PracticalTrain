@@ -1,6 +1,8 @@
 package com.gfz.dao;
 
 import com.gfz.dto.City;
+
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -14,4 +16,6 @@ public interface CityDao {
     public  List<City> findAll();
     public City findByName(String name);
     public int edit(City city);
+    public int add(City city) ;
+
 }

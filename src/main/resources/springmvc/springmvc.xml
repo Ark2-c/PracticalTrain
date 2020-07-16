@@ -40,6 +40,8 @@
 		<mvc:exclude-mapping path="/login/login"/>
 		<mvc:exclude-mapping path="/login/check"/>
 		<mvc:exclude-mapping path="/js/**"/>
+		<mvc:exclude-mapping path="/css/**"/>
+		<mvc:exclude-mapping path="/img/**"/>
 			<bean class="com.gfz.interceptor.Interceptor"></bean>
 		</mvc:interceptor>
 	</mvc:interceptors>

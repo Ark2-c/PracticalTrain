@@ -16,5 +16,9 @@
     <update id="edit" parameterType="Citizen">
         update citizen set username=#{username},passwd = #{passwd} where id = #{id}
     </update>
+    <select id="count" resultType="CityCitizen">
+        select city.name ,citizen_city.count from citizen_city,city where citizen_city.cityID=city.cityID
+    </select>
+
 
 </mapper>

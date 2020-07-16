@@ -33,4 +33,18 @@ public class CityTest {
         int row = cityService.edit(city);
         System.out.println(row);
     }
+    @Test
+    public void add() throws IOException {
+        CityService cityService = new CitySImp();
+        String[] cities ={"太原","阳泉","长治","晋城","大同","朔州","忻州","晋中","临汾","运城","吕梁"};
+        City city;
+        int row =0;
+        for (int i=2;i<=cities.length;i++){
+            city = new City(i,cities[i-1]+"市");
+            cityService.add(city);
+            row++;
+        }
+
+        System.out.println(row);
+    }
 }

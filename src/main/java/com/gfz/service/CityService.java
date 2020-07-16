@@ -1,5 +1,6 @@
 package com.gfz.service;
 
+import com.gfz.dto.Citizen;
 import com.gfz.dto.City;
 import com.gfz.dto.City;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,6 @@ public interface CityService {
     public List<City> findAll() throws IOException;
     public City findByName(String name) throws IOException;
     public int edit(City city)throws IOException;
-
+    public int add(City city) throws IOException;
 }
 

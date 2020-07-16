@@ -4,6 +4,7 @@ import com.gfz.dao.CitizenDao;
 import com.gfz.dao.CityDao;
 import com.gfz.dto.Citizen;
 import com.gfz.dto.City;
+import com.gfz.dto.CityCitizen;
 import com.gfz.service.CitizenService;
 import com.gfz.util.MybatisUtils;
 import org.apache.ibatis.session.SqlSession;
@@ -70,5 +71,14 @@ public class CitizenSImp implements CitizenService {
         sqlSession.commit();
         sqlSession.close();
         return rows;
+    }
+    public List<CityCitizen> count() throws IOException{
+        SqlSessionFactory sqlSessionFactory = MybatisUtils.getFactory();
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        CitizenDao citizenDao = sqlSession.getMapper(CitizenDao.class);
+        List<CityCitizen>  count = citizenDao.count();
+        sqlSession.commit();
+        sqlSession.close();
+        return count;
     }
 }

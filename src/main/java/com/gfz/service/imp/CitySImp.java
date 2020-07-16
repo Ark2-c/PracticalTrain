@@ -1,5 +1,6 @@
 package com.gfz.service.imp;
 
+import com.gfz.dao.CitizenDao;
 import com.gfz.dao.CityDao;
 import com.gfz.dto.Citizen;
 import com.gfz.dto.City;
@@ -55,5 +56,14 @@ public class CitySImp implements CityService {
         sqlSession.close();
         return rows;
     }
-
+    @Override
+    public int add(City city) throws IOException {
+        SqlSessionFactory sqlSessionFactory = MybatisUtils.getFactory();
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        CityDao cityDao= sqlSession.getMapper(CityDao.class);
+        int rows = cityDao.add(city);
+        sqlSession.commit();
+        sqlSession.close();
+        return rows;
+    }
 }
