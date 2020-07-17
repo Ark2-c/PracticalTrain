@@ -3,7 +3,6 @@ package com.gfz.controller;
 import com.gfz.dto.Admin;
 import com.gfz.service.AdminService;
 import com.gfz.service.imp.AdminSImp;
-import net.sf.json.JSONObject;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -92,5 +91,6 @@ public class LoginController {
         model.setViewName("index");
         return model;
     }
+
 
 }

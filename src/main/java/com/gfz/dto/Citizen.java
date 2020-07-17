@@ -11,12 +11,14 @@ public class Citizen {
     private String name;
     private String phone;
     private int sex;
+    private int cityID;
 
-    public Citizen(String idCard, String name, String phone, int sex) {
+    public Citizen(String idCard, String name, String phone, int sex,int cityID) {
         this.idCard = idCard;
         this.name = name;
         this.phone = phone;
         this.sex = sex;
+        this.cityID = cityID;
     }
 
     public Citizen() {
@@ -54,9 +56,18 @@ public class Citizen {
         this.sex = sex;
     }
 
+    public int getCityID() {
+        return cityID;
+    }
+
+    public void setCityID(int cityID) {
+        this.cityID = cityID;
+    }
+
     @Override
     public String toString() {
         return "Citizen{" +
+                "cityID='" + cityID + '\'' +
                 "idCard='" + idCard + '\'' +
                 ", name='" + name + '\'' +
                 ", phone='" + phone + '\'' +

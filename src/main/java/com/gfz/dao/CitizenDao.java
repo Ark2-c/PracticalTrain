@@ -18,4 +18,5 @@ public interface CitizenDao {
     public int edit(Citizen citizen);
     public int delete(String id);
     public List<CityCitizen>  count();
+    public List<Citizen> getPerson(String name);
 }

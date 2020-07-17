@@ -10,15 +10,19 @@
 	    select * from citizen where name = #{name}
     </select>
     <update id="add" parameterType="Citizen">
-        insert into citizen(idCard,name,phone,sex) values(#{idCard},#{name },#{phone},#{sex})
+        insert into citizen(idCard,name,phone,sex,cityID) values(#{idCard},#{name },#{phone},#{sex},#{cityID})
     </update>
 
     <update id="edit" parameterType="Citizen">
-        update citizen set username=#{username},passwd = #{passwd} where id = #{id}
+        update citizen set username=#{username},passwd = #{passwd}  where id = #{id}
     </update>
     <select id="count" resultType="CityCitizen">
         select city.name ,citizen_city.count from citizen_city,city where citizen_city.cityID=city.cityID
     </select>
-
+    <select id="getPerson" resultType="Citizen" parameterType="String">
+        SELECT idCard,citizen.`name`,phone,sex FROM city,citizen
+        where citizen.cityID = city.cityID and
+        city.`name`=#{name};
+    </select>
 
 </mapper>

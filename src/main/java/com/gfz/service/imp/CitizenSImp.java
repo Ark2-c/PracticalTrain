@@ -81,4 +81,12 @@ public class CitizenSImp implements CitizenService {
         sqlSession.close();
         return count;
     }
+    public List<Citizen> getPerson(String name) throws IOException {
+        SqlSessionFactory sqlSessionFactory = MybatisUtils.getFactory();
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        CitizenDao citizenDao = sqlSession.getMapper(CitizenDao.class);
+        List<Citizen> list = citizenDao.getPerson(name);
+        sqlSession.close();
+        return list;
+    }
 }

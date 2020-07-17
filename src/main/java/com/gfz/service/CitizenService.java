@@ -20,4 +20,5 @@ public interface CitizenService {
     public int edit(Citizen citizen) throws IOException;
     public int delete(String id) throws IOException;
     public List<CityCitizen> count()throws IOException;
+    public List<Citizen> getPerson(String name) throws IOException;
 }
