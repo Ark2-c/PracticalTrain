@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gfz.dao.CityDao">
+
+    <select id="findAll" resultType="City">
+  		select * from city;
+  	</select>
+
+	<update id="edit" parameterType="City">
+        update city set name=#{name} where cityID = #{cityID}
+    </update>
+
+    <select id="findByName" parameterType="String" resultType="City">
+	    select * from city where name = #{name}
+    </select>
+    <update id="add" parameterType="Citizen" >
+        insert into city(cityID,name) values(#{cityID},#{name })
+    </update>
+
+</mapper>

@@ -1,0 +1,104 @@
+body{
+    font-size: larger;
+    color: aliceblue;
+    background-color: rgb(44, 81, 93);
+}
+input {
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+input.text {
+    font-family:Arial;
+    outline-style: none;
+    border: 1px solid #ccc;
+    width: 300px;
+    height: 35px;
+    font-size: 20px;
+
+}
+
+input#submit {
+    position: absolute;
+    right: -50px;
+    margin-top: 20px;
+    outline-style: none;
+    position: relative;
+    background-color: aliceblue;
+    width: 50%;
+    height: 40px;
+    font-size: larger;
+    width: 200px;/*设置按钮宽度*/
+    height: 45px;/*设置按钮高度*/
+    color:white;/*字体颜色*/
+    background-color:cornflowerblue;/*按钮背景颜色*/
+    border-radius: 3px;/*让按钮变得圆滑一点*/
+    border-width: 0;/*消去按钮丑的边框*/
+    margin: 0;
+    outline: none;/*取消轮廓*/
+    
+    font-size: 20px;/*设置字体大小*/
+    text-align: center;/*字体居中*/
+    cursor: pointer;/*设置鼠标箭头手势*/
+
+}
+
+#loginFrom {
+    width: 340px;
+
+    border: 20px solid;
+    padding: 20px;
+    position:fixed;
+    top: 30%;
+    left: 70%;
+    border-image-source: url('../img/border.png');
+    border-image-slice: 50 40 20 130;
+    border-image-width: 50px 40px 20px 128px;
+    
+}
+
+#loginBG {
+    position: absolute;
+    background-image: url('../img/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border:20px;
+    border-radius:20px;
+    width: 75%;
+    height: 98%;
+
+}
+.iconfont{
+    color: #fff;
+    font-size: 40px
+}
+#head{
+    position:fixed;
+    width: 150px;
+    height: 150px;
+    top: 50px;;
+    left: 1200px;
+    border:5px solid rgb(51, 153, 203);
+    border-radius :100%;
+    background-image: url(../img/head.jpg);
+    background-size: cover;
+    box-sizing:border-box;
+
+}
+#copyRight{
+    position: absolute;
+    width: 300px;
+    height: 25px;
+    top: 725px;
+    right: 50px;
+    
+    border:2px solid rgb(51, 153, 203);
+    border-radius :5px;
+    background-image: url(../img/head.jpg);
+    background-size: cover;
+    color: #000;  
+
+}
+#font{
+    margin: auto;
+}

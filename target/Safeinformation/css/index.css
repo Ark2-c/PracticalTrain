@@ -1,0 +1,49 @@
+body{
+    line-height: 1.15;
+    font-size: 0.5rem;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: 0 0 / cover;
+    background-color: #101129;
+}
+.container{
+    /* background: url("../img/logo.png") no-repeat; */
+    /* 版心的高度 */
+    min-height: 700px;
+    min-width: 1000px;
+    max-width: 1920px;
+
+     margin: 0 auto;
+     background-size:contain;
+     padding: 20px;
+     display: flex;
+}
+div.colunm{
+    
+    width: 450px;
+    display: flex;
+}
+.colunm:nth-child(1){
+    
+    /* width: 450px; */
+    flex: 3;
+}
+.colunm:nth-child(2){
+    padding-left: 20px;
+    flex: 3;
+}
+.colunm:nth-child(3){
+    /* width: 450px; */
+    padding-left: 20px;
+    flex: 3;
+}
+#shanxi{
+    margin: auto;
+    width: 450px;
+    height: 600px;
+    border: 5px solid red;
+    border-image-source: url('../img/border.png');
+    border-image-slice: 50 40 20 130;
+    border-image-width: 50px 40px 20px 128px;
+}
